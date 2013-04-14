@@ -73,9 +73,9 @@ body{
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="{% url 'gallery' gallery='bridal' %}">Bridal</a></li>
-                <li><a href="#">Memorial</a></li>
-                <li><a href="#">Original Art</a></li>
-                <li><a href="#">Other</a></li>
+                <li><a href="{% url 'gallery' gallery='memorial' %}">Memorial</a></li>
+                <li><a href="{% url 'gallery' gallery='original' %}">Original Art</a></li>
+                <li><a href="{% url 'gallery' gallery='other' %}">Other</a></li>
               </ul>
           </li>
           <li><a href="#">Supplies</a></li>
