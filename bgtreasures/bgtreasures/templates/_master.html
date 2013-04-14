@@ -51,6 +51,41 @@ body{
 </head>
 
 <body>
+  <div id="header">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="span10">
+          <h1>B's Garden Treasures</h1>
+          <div>To plant a garden is to believe in the future...</div>
+        </div>
+        <div class="span2">
+          <img src="{{ STATIC_URL }}img/WWPFG-Member-Logo.jpg" alt="WWPFG-Member-Logo" class="pull-right" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-static-top">
+      <div class="container">
+        <ul class="nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Bridal</a></li>
+                <li><a href="#">Memorial</a></li>
+                <li><a href="#">Original Art</a></li>
+                <li><a href="#">Other</a></li>
+              </ul>
+          </li>
+          <li><a href="#">Supplies</a></li>
+          <li><a href="#">Shows</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+  </div>
+
   {% block content %}{% endblock %}`
   <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
   <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
