@@ -7,6 +7,7 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     url(r'^$', 'bgtreasures.views.home', name='home'),
     url(r'^about$', 'bgtreasures.views.about', name='about'),
+    url(r'^gallery/(?P<gallery>\w+)/$', 'bgtreasures.views.gallery', name='gallery'),
     # Examples:
     # url(r'^$', 'bgtreasures.views.home', name='home'),
     # url(r'^bgtreasures/', include('bgtreasures.foo.urls')),
