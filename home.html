@@ -1,133 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>BG Treasures</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+<meta charset="utf-8">
+<title>BG Treasures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 20px;
-        padding-bottom: 60px;
-      }
+<!-- Le styles -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+body{
+}
+.container {left:auto;right:auto}
+#header {
+  background: #cfe7d1 url('img/bg_head.jpg') repeat fixed top center;
+  background-attachment: scroll;
+}
+</style>
+<link href="css/bootstrap-responsive.css" rel="stylesheet">
+<style type="text/css">
+@media (max-width: 767px) {
+  .container { left: auto; right: auto }
+  container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  .container { left: auto; right: auto }
+  container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  body{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
-      /* Custom container */
-      .container {
-        margin: 0 auto;
-        max-width: 1000px;
-      }
-      .container > hr {
-        margin: 60px 0;
-      }
-
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 80px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 100px;
-        line-height: 1;
-      }
-      .jumbotron .lead {
-        font-size: 24px;
-        line-height: 1.25;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
-
-      /* Supporting marketing content */
-      .marketing {
-        margin: 60px 0;
-      }
-      .marketing p + h4 {
-        margin-top: 28px;
-      }
-
-
-      /* Customize the navbar links to be fill the entire space of the .navbar */
-      .navbar .navbar-inner {
-        padding: 0;
-      }
-      .navbar .nav {
-        margin: 0;
-        display: table;
-        width: 100%;
-      }
-      .navbar .nav li {
-        display: table-cell;
-        width: 1%;
-        float: none;
-      }
-      .navbar .nav li a {
-        font-weight: bold;
-        text-align: center;
-        border-left: 1px solid rgba(255,255,255,.75);
-        border-right: 1px solid rgba(0,0,0,.1);
-      }
-      .navbar .nav li:first-child a {
-        border-left: 0;
-        border-radius: 3px 0 0 3px;
-      }
-      .navbar .nav li:last-child a {
-        border-right: 0;
-        border-radius: 0 3px 3px 0;
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
+</style>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
-
-    <div class="container">
-
-      <div class="masthead">
-        <h3 class="muted">
-          <img src="img/logo_100.png" alt="BG Treasures" />
-          <i>To plant a garden is to believe in the future...</i>
-          <img src="img/WWPFG-Member-Logo.jpg" alt="WWPFG-Member-Logo" class="pull-right" />
-        </h3>
-        <div class="navbar">
-          <div class="navbar-inner">
-            <div class="container">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Supplies</a></li>
-                <li><a href="#">Shows</a></li>
-                <li><a href="#">Links</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+<body>
+<div id="header">
+  <div class="container">
+    <div class="row-fluid">
+      <div class="span10">
+        <!-- <img src="img/logo_100.png" alt="BG Treasures" /> -->
+        <h1>B's Garden Treasures</h1>
+        <div>To plant a garden is to believe in the future...</div>
       </div>
-
-      <!-- Example row of columns -->
-      <div class="row-fluid">
-        <div class="span12">
-          <h2>Welcome</h2>
-          <p>
-Welcome to B’s Garden Treasures. To me, there is nothing more beautiful than a flower in bloom.  My art uses real flowers, leaves and other botanicals which are pressed to remove all moisture so their beauty can be preserved for years to come.  My original art ranges from simple bookmarks, cards and jewelry to more complex floral landscapes and bridal bouquets.  I also offer “frame-ready” digital copies of my work along with coasters and trivets.  Most of the flowers used in my art come from my own beautiful gardens
-          </p>
-       </div>
+      <div class="span2">
+        <img src="img/WWPFG-Member-Logo.jpg" alt="WWPFG-Member-Logo" class="pull-right" />
       </div>
-      <div class="footer"></div>
     </div>
+  </div>
+</div>
+<div class="navbar navbar-static-top">
+    <div class="container">
+      <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Supplies</a></li>
+        <li><a href="#">Shows</a></li>
+        <li><a href="#">Links</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+</div>
+<div class="container">
+  <!-- Example row of columns -->
+  <div class="row-fluid">
+    <div class="span12">
+      <h2>Welcome</h2>
+      <p>
+      Welcome to B’s Garden Treasures. To me, there is nothing more beautiful than a flower in bloom.  My art uses real flowers, leaves and other botanicals which are pressed to remove all moisture so their beauty can be preserved for years to come.  My original art ranges from simple bookmarks, cards and jewelry to more complex floral landscapes and bridal bouquets.  I also offer “frame-ready” digital copies of my work along with coasters and trivets.  Most of the flowers used in my art come from my own beautiful gardens
+      </p>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="span4">
+      <img src="http://placekitten.com/300/200" alt="kitten" />
+    </div>
+    <div class="span4">
+      <img src="http://placekitten.com/302/200" alt="kitten" />
+    </div>
+    <div class="span4">
+      <img src="http://placekitten.com/301/200" alt="kitten" />
+    </div>
+  </div>
+  <div class="footer"></div>
+</div>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
 </html>
