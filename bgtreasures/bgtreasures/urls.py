@@ -7,6 +7,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'bgtreasures.views.home', name='home'),
     url(r'^about$', 'bgtreasures.views.about', name='about'),
+    url(r'^supplies$', 'bgtreasures.views.supplies', name='supplies'),
+    url(r'^shows$', 'bgtreasures.views.shows', name='shows'),
+    url(r'^links$', 'bgtreasures.views.links', name='links'),
+    url(r'^contact$', 'bgtreasures.views.contact', name='contact'),
     url(r'^gallery/(?P<gallery>\w+)/$', 'bgtreasures.views.gallery', name='gallery'),
     # Examples:
     # url(r'^$', 'bgtreasures.views.home', name='home'),
