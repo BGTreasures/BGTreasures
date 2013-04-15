@@ -9,6 +9,11 @@
       <div class="span12">
         <h2>Welcome</h2>
         <p>
+        <ul>
+        {% for p in people %}
+        <li>{{ p.first_name }}</li>
+        {% endfor %}
+        </ul>
         Welcome to B’s Garden Treasures. To me, there is nothing more beautiful than a flower in bloom.  My art uses real flowers, leaves and other botanicals which are pressed to remove all moisture so their beauty can be preserved for years to come.  My original art ranges from simple bookmarks, cards and jewelry to more complex floral landscapes and bridal bouquets.  I also offer “frame-ready” digital copies of my work along with coasters and trivets.  Most of the flowers used in my art come from my own beautiful gardens
         </p>
       </div>
