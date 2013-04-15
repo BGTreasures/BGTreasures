@@ -8,9 +8,11 @@
     <div class="row-fluid">
       <div class="span12">
         <h2>Contact</h2>
-        <p>
-       Contact content
-        </p>
+        <form action="/contact/" method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Send" />
+        </form>
       </div>
     </div>
   </div>
