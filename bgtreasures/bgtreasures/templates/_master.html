@@ -67,9 +67,9 @@ body{
   <div class="navbar navbar-static-top">
       <div class="container">
         <ul class="nav">
-          <li class="active"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'about' %}">About</a></li>
-          <li class="dropdown">
+          <li id="home"><a href="{% url 'home' %}">Home</a></li>
+          <li id="about"><a href="{% url 'about' %}">About</a></li>
+          <li id="gallery" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gallery <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="{% url 'gallery' gallery='bridal' %}">Bridal</a></li>
@@ -78,10 +78,10 @@ body{
                 <li><a href="{% url 'gallery' gallery='other' %}">Other</a></li>
               </ul>
           </li>
-          <li><a href="{% url 'supplies' %}">Supplies</a></li>
-          <li><a href="{% url 'shows' %}">Shows</a></li>
-          <li><a href="{% url 'links' %}">Links</a></li>
-          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li id="supplies"><a href="{% url 'supplies' %}">Supplies</a></li>
+          <li id="shows"><a href="{% url 'shows' %}">Shows</a></li>
+          <li id="links"><a href="{% url 'links' %}">Links</a></li>
+          <li id="contact"><a href="{% url 'contact' %}">Contact</a></li>
         </ul>
       </div>
   </div>
@@ -89,5 +89,12 @@ body{
   {% block content %}{% endblock %}
   <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
   <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+  <script>
+  {% block scripts %}
+    $(function(){
+      $("li#home").addClass("active");
+    });
+  {% endblock %}
+  </script>
 </body>
 </html>
