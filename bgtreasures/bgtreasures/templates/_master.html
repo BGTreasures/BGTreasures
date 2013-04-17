@@ -56,7 +56,7 @@ body{
       <div class="row-fluid">
         <div class="span10">
           <h1>B's Garden Treasures</h1>
-          <div>To plant a garden is to believe in the future...</div>
+          {% block quote %}To plant a garden is to believe in the future...{% endblock %}
         </div>
         <div class="span2">
           <img src="{{ STATIC_URL }}img/WWPFG-Member-Logo.jpg" alt="WWPFG-Member-Logo" class="pull-right" />
@@ -86,7 +86,7 @@ body{
       </div>
   </div>
 
-  {% block content %}{% endblock %}`
+  {% block content %}{% endblock %}
   <script src="{{ STATIC_URL }}js/jquery.min.js"></script>
   <script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
 </body>
