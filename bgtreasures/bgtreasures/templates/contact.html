@@ -2,6 +2,11 @@
 
 {% block title %}B's Garden Treasures - About{% endblock %}
 {% block quote %} "A garden is the best alternative therapy..."  Germaine Greer {% endblock %}
+{% block scripts %}
+  $(function(){
+    $("li#contact").addClass("active");
+  });
+{% endblock %}
 {% block content %}
   <div class="container">
     <div class="row">

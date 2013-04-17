@@ -2,6 +2,11 @@
 
 {% block title %}B's Garden Treasures - About{% endblock %}
 {% block quote %}"A garden is a friend you can visit any time..."{% endblock %}
+{% block scripts %}
+  $(function(){
+    $("li#shows").addClass("active");
+  });
+{% endblock %}
 {% block content %}
   <div class="container">
      <div class="row-fluid">
