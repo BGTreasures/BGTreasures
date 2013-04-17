@@ -2,6 +2,11 @@
 
 {% block title %}B's Garden Treasures - About{% endblock %}
 {% block quote %}"As the garden grows, so does the gardener..."{% endblock %}
+{% block scripts %}
+  $(function(){
+    $("li#about").addClass("active");
+  });
+{% endblock %}
 {% block content %}
 <div class="container">
   <div class="row-fluid">

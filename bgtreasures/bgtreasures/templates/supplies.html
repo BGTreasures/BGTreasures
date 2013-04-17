@@ -2,6 +2,11 @@
 
 {% block title %}B's Garden Treasures - About{% endblock %}
 
+{% block scripts %}
+  $(function(){
+    $("li#supplies").addClass("active");
+  });
+{% endblock %}
 {% block content %}
   <div class="container">
     <!-- Example row of columns -->
