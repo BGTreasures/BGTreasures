@@ -1,5 +1,7 @@
 body {}
-
+#wwpfg{
+  margin: 10px 0;
+}
 #header {
   background: #cfe7d1 url('../img/bg_head.jpg') repeat fixed top center;
   background-attachment: scroll;
@@ -8,7 +10,37 @@ body {}
 .container {left:auto;right:auto}
 
 .bg-quote{
-  font-style: italics;
+  font-style: italic;
+  font-size: 90%;
+  color: #555;
+}
+
+.navbar {
+  background: url('../img/menubar.gif');
+  color: #56B91D;
+  border-top: solid #333 1px;
+  border-bottom: solid #333 1px;
+}
+.navbar .nav>li{}
+
+.navbar .nav li.dropdown.open>.dropdown-toggle, 
+.navbar .nav li.dropdown.active>.dropdown-toggle, 
+.navbar .nav li.dropdown.open.active>.dropdown-toggle{
+  background-color: transparent;
+}
+
+.navbar .nav>.active>a, 
+.navbar .nav>.active>a:hover, 
+.navbar .nav>.active>a:focus{
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.navbar .nav>li.active>a{
+}
+.navbar .nav>li>a {
+  color: #56B91D;
+  text-shadow: 0 1px 0 #000;
 }
 
 @media (max-width: 767px) {
