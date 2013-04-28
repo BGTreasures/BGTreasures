@@ -3,37 +3,55 @@ body {}
   margin: 10px 0;
 }
 #header {
-  background: #cfe7d1 url('../img/bg_head.jpg') repeat fixed top center;
+  /* background: #cfe7d1 url('../img/bg_head.jpg') repeat fixed top center; */
+  background-color: #EBF3E0;
   background-attachment: scroll;
 }
 
 .container {left:auto;right:auto}
 
+@import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
 .bg-quote{
-  font-style: italic;
-  font-size: 90%;
-  color: #555;
+  font-size: 16px;
+  color: #444;
+  font-family: 'IM Fell Double Pica', serif;
+  font-family: 'Lovers Quarrel', cursive;
 }
 
 .navbar {
-  background: url('../img/menubar.gif');
+  /* background: url('../img/menubar.gif'); */
+  background-color: #3b4145;
   color: #56B91D;
   border-top: solid #333 1px;
   border-bottom: solid #333 1px;
 }
 .navbar .nav>li{}
 
-.navbar .nav li.dropdown.open>.dropdown-toggle, 
+/*
 .navbar .nav li.dropdown.active>.dropdown-toggle, 
-.navbar .nav li.dropdown.open.active>.dropdown-toggle{
-  background-color: transparent;
+.navbar .nav li.dropdown.open.active>.dropdown-toggle
+{
+  background-color: #e5e5e5;
+}
+*/
+
+.navbar .nav li.dropdown.open>.dropdown-toggle
+{
+  color: #FFF;
+  background-color:  #4e8908;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
 }
 
-.navbar .nav>.active>a, 
-.navbar .nav>.active>a:hover, 
+.navbar .nav li.dropdown.active>.dropdown-toggle, 
+.navbar .nav li.dropdown.open.active>.dropdown-toggle,
+.navbar .nav>.active>a,
+.navbar .nav>.active>a:hover,
 .navbar .nav>.active>a:focus{
   -webkit-box-shadow: none;
   box-shadow: none;
+  background-color: #4e8908;
+  color: #FFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
 }
 
 .navbar .nav>li.active>a{
@@ -43,8 +61,13 @@ body {}
   text-shadow: 0 1px 0 #000;
 }
 .navbar .nav>li>a {
-  color: #56B91D;
-  text-shadow: 0 1px 0 #000;
+  color: #FFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.8);
+}
+
+.dropdown-menu>li>a:hover{
+  background-color: #f6f6f6;
+
 }
 
 @media (max-width: 767px) {
@@ -69,3 +92,50 @@ body {}
     padding-right: 0;
   }
 }
+
+
+/* sticky footer */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -80px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 80px;
+}
+#footer {
+border-top: solid #4e8908 4px;
+  color: #fff;
+  background-color: #3b4145;
+  text-align: center;
+font-size: 10px;
+}
+
+#content{
+min-height: 600px;
+}
+
+
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+/* end sticky footer */
