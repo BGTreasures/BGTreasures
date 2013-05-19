@@ -3,10 +3,6 @@
 {% block title %}B's Garden Treasures - Home{% endblock %}
 
 {% block content %}
-<style type="text/css">
-.inner-item { text-align: center;}
-.inner-item img{ margin: 0 auto;}
-</style>
 <div id="content" class="container">
   <div class="row-fluid">
     <div id="title" class="span12">
@@ -14,11 +10,13 @@
       <hr>
     </div>
   </div>
-  <div id="myCarousel" class="carousel slide">
+  <div id="bg-carousel" class="carousel slide">
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
     </ol>
     <!-- Carousel items -->
     <div class="carousel-inner">
@@ -42,15 +40,11 @@
           <img src="{{ STATIC_URL }}img/gallery/home/flowers.png" alt="" />
         </div>
       </div>
-      {# <div class="item"> #}
-        {#   <div class="inner-item"> #}
-          {#     <img src="{{ STATIC_URL }}img/gallery/art/149-Golden-Sunset-w1.gif" alt="153-Malcuria" /> #}
-          {#   </div> #}
-        {#   <div class="carousel-caption"> #}
-          {#     <h4>Sunset</h4> #}
-          {#     <p>Image description here</p> #}
-          {#   </div> #}
-        {# </div> #}
+      <div class="item">
+        <div class="inner-item">
+          <img src="{{ STATIC_URL }}img/gallery/home/birdhouse.png" alt="" />
+        </div>
+      </div>
     </div>
     <!-- Carousel nav -->
     <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
