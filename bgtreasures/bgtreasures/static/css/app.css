@@ -70,6 +70,9 @@ body {}
 
 }
 
+#bg-carousel .inner-item { text-align: center;}
+#bg-carousel .inner-item img{ margin: 0 auto;}
+
 @media (max-width: 767px) {
   .container { left: auto; right: auto }
   container{
