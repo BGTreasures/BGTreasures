@@ -8,7 +8,8 @@ from django import http
 from models import ContactForm
 
 def home(request):
-    return render_to_response('home.html', {}, context_instance=RequestContext(request))
+    imgs = []
+    return render_to_response('home.html', {'imgs': imgs}, context_instance=RequestContext(request))
 
 def about(request):
     return render_to_response('about.html', {}, context_instance=RequestContext(request))
