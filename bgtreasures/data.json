@@ -436,6 +436,16 @@
    }
 },
 {
+   "pk": 5, 
+   "model": "gallery.galleryitemmodifier", 
+   "fields": {
+      "item": 2, 
+      "order": 10, 
+      "value": "value", 
+      "title": "test"
+   }
+},
+{
    "pk": 1, 
    "model": "auth.permission", 
    "fields": {
@@ -1059,6 +1069,45 @@
       "change_message": "", 
       "user": 1, 
       "content_type": 8
+   }
+},
+{
+   "pk": 27, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 1, 
+      "action_time": "2013-05-20T02:18:37.761Z", 
+      "object_repr": "test", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 8
+   }
+},
+{
+   "pk": 28, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 3, 
+      "action_time": "2013-05-20T02:19:45.515Z", 
+      "object_repr": "test", 
+      "object_id": "4", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 8
+   }
+},
+{
+   "pk": 29, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 1, 
+      "action_time": "2013-05-20T03:10:50.402Z", 
+      "object_repr": "(Golden Sunset): test=value", 
+      "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 10
    }
 }
 ]
