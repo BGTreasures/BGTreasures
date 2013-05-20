@@ -9,7 +9,7 @@ def gallery(request, gallery=None):
     cats = None
 
     if gallery in ['bridal', 'memorial', 'original']:
-        v = "gallery_%s.html" % gallery
+        v = "%s.html" % gallery
         if gallery in ['original']:
             cats = GalleryCategory.objects.all()
     else:
