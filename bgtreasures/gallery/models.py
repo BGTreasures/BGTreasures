@@ -21,7 +21,7 @@ class GalleryItem(models.Model):
     updatedOn = models.DateTimeField(default=datetime.datetime.now)
 
     def __unicode__(self):
-        return self.title
+        return "(%s): %s" % (self.category.title, self.title)
 
 class GalleryItemModifier(models.Model):
     title = models.CharField(max_length=100)
