@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     url(r'^links$', 'bgtreasures.views.links', name='links'),
     url(r'^contact/$', 'bgtreasures.views.contact', name='contact'),
     url(r'^contact_success$', 'bgtreasures.views.contact_success', name='contact_success'),
-    url(r'^gallery/(?P<gallery>\w+)/$', 'bgtreasures.views.gallery', name='gallery'),
+    url(r'^gallery/(?P<gallery>\w+)/$', 'gallery.views.gallery', name='gallery'),
     # Examples:
     # url(r'^$', 'bgtreasures.views.home', name='home'),
     # url(r'^bgtreasures/', include('bgtreasures.foo.urls')),

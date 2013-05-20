@@ -43,11 +43,3 @@ def contact(request):
 
 def contact_success(request):
     return render_to_response('contact_success.html', {}, context_instance=RequestContext(request))
-
-def gallery(request, gallery=None):
-    v = ""
-    if gallery in ['bridal', 'memorial', 'original', 'other']:
-        v = "gallery_%s.html" % gallery
-
-    return render_to_response(v, {}, context_instance=RequestContext(request))
-
