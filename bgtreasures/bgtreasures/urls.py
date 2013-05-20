@@ -2,6 +2,7 @@ from django.conf.urls import patterns, include, url
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from gallery import urls
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -13,10 +14,6 @@ urlpatterns = patterns('',
     url(r'^contact/$', 'bgtreasures.views.contact', name='contact'),
     url(r'^contact_success$', 'bgtreasures.views.contact_success', name='contact_success'),
 
-    #TODO: put these in gallery app
-    url(r'^gallery/(?P<gallery>\w+)/$', 'gallery.views.gallery', name='gallery'),
-    url(r'^gallery/(?P<gallery>\w+)/(?P<id>\d+)$', 'gallery.views.gallery_item', name='gallery_item'),
-    
     # Examples:
     # url(r'^$', 'bgtreasures.views.home', name='home'),
     # url(r'^bgtreasures/', include('bgtreasures.foo.urls')),
@@ -27,3 +24,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
+
+urlpatterns += patterns('',
+    url(r'^gallery/', include('gallery.urls')),
+)
+
