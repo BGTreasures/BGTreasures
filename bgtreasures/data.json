@@ -421,7 +421,7 @@
    "fields": {
       "item": 1, 
       "order": 10, 
-      "value": "Yes", 
+      "value": "is available", 
       "title": "Original"
    }
 },
@@ -431,7 +431,7 @@
    "fields": {
       "item": 1, 
       "order": 10, 
-      "value": "$195", 
+      "value": "$265.oo", 
       "title": "Price"
    }
 },
@@ -443,6 +443,26 @@
       "order": 10, 
       "value": "value", 
       "title": "test"
+   }
+},
+{
+   "pk": 6, 
+   "model": "gallery.galleryitemmodifier", 
+   "fields": {
+      "item": 1, 
+      "order": 10, 
+      "value": "Are Available", 
+      "title": "Coasters "
+   }
+},
+{
+   "pk": 7, 
+   "model": "gallery.galleryitemmodifier", 
+   "fields": {
+      "item": 1, 
+      "order": 10, 
+      "value": "Are Available", 
+      "title": "Trivets"
    }
 },
 {
@@ -1105,6 +1125,71 @@
       "action_time": "2013-05-20T03:10:50.402Z", 
       "object_repr": "(Golden Sunset): test=value", 
       "object_id": "5", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 10
+   }
+},
+{
+   "pk": 30, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-20T04:34:35.104Z", 
+      "object_repr": "(A winter landscape): Price=$265.oo", 
+      "object_id": "4", 
+      "change_message": "Changed value.", 
+      "user": 1, 
+      "content_type": 10
+   }
+},
+{
+   "pk": 31, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-20T04:36:24.049Z", 
+      "object_repr": "(A winter landscape): Size of Art=11\" x 14\"", 
+      "object_id": "1", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 10
+   }
+},
+{
+   "pk": 32, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-20T04:39:08.198Z", 
+      "object_repr": "(A winter landscape): Original=is available", 
+      "object_id": "3", 
+      "change_message": "Changed value.", 
+      "user": 1, 
+      "content_type": 10
+   }
+},
+{
+   "pk": 33, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 1, 
+      "action_time": "2013-05-20T04:39:57.855Z", 
+      "object_repr": "(A winter landscape): Coasters =Are Available", 
+      "object_id": "6", 
+      "change_message": "", 
+      "user": 1, 
+      "content_type": 10
+   }
+},
+{
+   "pk": 34, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 1, 
+      "action_time": "2013-05-20T04:40:25.705Z", 
+      "object_repr": "(A winter landscape): Trivets=Are Available", 
+      "object_id": "7", 
       "change_message": "", 
       "user": 1, 
       "content_type": 10
