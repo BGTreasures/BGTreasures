@@ -150,7 +150,7 @@
       "image": "img/gallery/art/151-winter%20landscape-w-sm1.png", 
       "updatedOn": "2013-05-20T00:07:28Z", 
       "cover": "img/gallery/art/151-winter%20landscape-w-sm1.png", 
-      "frame_image": "img/gallery/art/151-winter%20landscape-w-sm1.png", 
+      "frame_image": "img/gallery/art/151-winter-landscape-fr-w1.png", 
       "item_num": 151, 
       "addedOn": "2013-05-20T00:07:28Z"
    }
@@ -3941,6 +3941,19 @@
       "change_message": "", 
       "user": 1, 
       "content_type": 10
+   }
+},
+{
+   "pk": 176, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-22T12:34:10.102Z", 
+      "object_repr": "(Landscapes): A Winter Landscape", 
+      "object_id": "1", 
+      "change_message": "Changed frame_image.", 
+      "user": 1, 
+      "content_type": 9
    }
 }
 ]
