@@ -147,9 +147,9 @@
       "category": 1, 
       "description": "I had an incredible time making this winter landscape. I used pastels covered with corn husks for the sky and was very pleased with the contrast of the mountains in the background. The cabin with smoke rising from the chimney made me want to enter it and sit by the fire.  I could clearly imagine sitting in the cabin and enjoying the landscape and oneness with nature from a window. It definitely brought out my oneness with nature.  I hope it does the same for you!\r\n\r\nBotanical materials included poplar, blackberry, day lilly, lilly of the valley and assorted Fall leaves; straw, corn husks, fern, hydrangea stems, onion skins, cosmos, cotton and birch bark. ", 
       "title": "A Winter Landscape", 
-      "image": "img/gallery/art/151-winter%20landscape-w-sm1.png", 
+      "image": "img/gallery/art/151-winter-landscape-fr-w1.png", 
       "updatedOn": "2013-05-20T00:07:28Z", 
-      "cover": "img/gallery/art/151-winter%20landscape-w-sm1.png", 
+      "cover": "img/gallery/art/151-winter-landscape-w-sm1.png", 
       "frame_image": "img/gallery/art/151-winter-landscape-fr-w1.png", 
       "item_num": 151, 
       "addedOn": "2013-05-20T00:07:28Z"
@@ -3952,6 +3952,149 @@
       "object_repr": "(Landscapes): A Winter Landscape", 
       "object_id": "1", 
       "change_message": "Changed frame_image.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 177, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-22T12:39:42.393Z", 
+      "object_repr": "(Landscapes): A Winter Landscape", 
+      "object_id": "1", 
+      "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 178, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:35:18.659Z", 
+      "object_repr": "(Landscapes): A Winter Landscape", 
+      "object_id": "1", 
+      "change_message": "Changed image.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 179, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:37:17.182Z", 
+      "object_repr": "(Landscapes): A Winter Landscape", 
+      "object_id": "1", 
+      "change_message": "Changed cover.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 180, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:43:37.283Z", 
+      "object_repr": "(Landscapes): A Winter Landscape", 
+      "object_id": "1", 
+      "change_message": "Changed cover.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 181, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:46:31.943Z", 
+      "object_repr": "(Landscapes): Autumn Splendor", 
+      "object_id": "7", 
+      "change_message": "Changed cover, image and frame_image.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 182, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:50:27.965Z", 
+      "object_repr": "(Landscapes): Autumn Splendor", 
+      "object_id": "7", 
+      "change_message": "Changed cover.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 183, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:53:44.928Z", 
+      "object_repr": "(Landscapes): Autumn Splendor", 
+      "object_id": "7", 
+      "change_message": "Changed image.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 184, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:55:52.948Z", 
+      "object_repr": "(Landscapes): Autumn Splendor", 
+      "object_id": "7", 
+      "change_message": "Changed cover, image and frame_image.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 185, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T03:57:59.377Z", 
+      "object_repr": "(Landscapes): Autumn Splendor", 
+      "object_id": "7", 
+      "change_message": "Changed cover, image and frame_image.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 186, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T04:00:09.038Z", 
+      "object_repr": "(Landscapes): A Winter Landscape", 
+      "object_id": "1", 
+      "change_message": "Changed cover.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 187, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-23T04:04:21.664Z", 
+      "object_repr": "(Landscapes): Autumn Splendor", 
+      "object_id": "7", 
+      "change_message": "No fields changed.", 
       "user": 1, 
       "content_type": 9
    }
