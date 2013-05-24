@@ -385,7 +385,7 @@
    "model": "gallery.galleryitem", 
    "fields": {
       "category": 3, 
-      "description": "I learned how to press straw a few years ago but up until now only used it to make birdhouses, window sills and other simple designs.  This piece was made with 100% pressed straw.  The bird was designed with strips of straw with added cuttings to enhance this fine feathered friend.  The flowers and leaves, however, were much more complex.  They were made from pieces which were cut and angled to reflect the veins in a leaf and to add dimension to the flower petals.  A lot more went into this design than one might have thought.  I hope you like it!\r\n\r\nBotanicals include:  straw, straw & more straw, some of which were dyed.", 
+      "description": "I learned how to press straw a few years ago but up until now only used it to make birdhouses, window sills and other simple designs.  This design was made with 100% pressed straw.  The bird was designed with strips of straw with added cuttings to enhance this fine feathered friend.  The flowers and leaves, however, were much more complex to make.  They were made from pieces which were cut and angled to reflect the veins in a leaf and to add dimension to the flower petals.  A lot more effort went into this design than one might have thought.  I hope you like it!\r\n\r\nBotanicals include:  straw, straw & more straw, some of which were dyed.", 
       "title": "My Garden Visitor", 
       "image": "img/gallery/art/159-Garden Visitor-w-sm1.png", 
       "updatedOn": "2013-05-20T02:01:28Z", 
@@ -4147,6 +4147,19 @@
       "object_repr": "(Landscapes): A Winter Landscape", 
       "object_id": "1", 
       "change_message": "No fields changed.", 
+      "user": 1, 
+      "content_type": 9
+   }
+},
+{
+   "pk": 192, 
+   "model": "admin.logentry", 
+   "fields": {
+      "action_flag": 2, 
+      "action_time": "2013-05-24T20:31:04.492Z", 
+      "object_repr": "(Other Designs): My Garden Visitor", 
+      "object_id": "17", 
+      "change_message": "Changed description.", 
       "user": 1, 
       "content_type": 9
    }
