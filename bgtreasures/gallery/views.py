@@ -18,6 +18,10 @@ def gallery(request, gallery=None):
     return render_to_response(v, {'cats': cats, 'gallery': gallery}, context_instance=RequestContext(request))
 
 def gallery_item(request, gallery=None, id=None):
-	item = GalleryItem.objects.get(item_num=id)
+    try:
+	    item = GalleryItem.objects.get(item_num=id)
+    except GalleryItem.DoesNotExist:
+        raise Http404
+
 	return render_to_response('item.html', {'item': item, 'gallery': gallery, 'id': id}, context_instance=RequestContext(request))
 
