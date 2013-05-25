@@ -31,3 +31,6 @@ class GalleryItemModifier(models.Model):
 
     def __unicode__(self):
         return "(%s): %s=%s" % (self.item.title, self.title, self.value)
+
+    class Meta:
+        ordering = ['item__id', 'order']
