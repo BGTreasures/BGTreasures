@@ -16,12 +16,16 @@ class GalleryItem(models.Model):
     cover = models.CharField(max_length=80)
     image = models.CharField(max_length=80)
     frame_image = models.CharField(max_length=80)
+    order = models.IntegerField(default=10)
     description = models.TextField()
     addedOn = models.DateTimeField(default=datetime.datetime.now)
     updatedOn = models.DateTimeField(default=datetime.datetime.now)
 
     def __unicode__(self):
         return "(%s): %s" % (self.category.title, self.title)
+
+    class Meta:
+        ordering = ['category__id', 'order']
 
 class GalleryItemModifier(models.Model):
     title = models.CharField(max_length=100)
