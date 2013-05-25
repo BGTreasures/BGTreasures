@@ -13,8 +13,12 @@
       self.position = ko.observable(0);
       self.showModal = function()
       {
+        if(imgs == null || imgs.length == 0){
+          imgs = ["{{ STATIC_URL }}{{ item.cover }}"]
+        }
+        $.fancybox.jumpto( [self.position] )
         $.fancybox.open(imgs, {
-          nextEffect: "fade",  
+          nextEffect: "fade",
           prevEffect: "fade",
         });
       }
@@ -42,7 +46,7 @@
       <a href="javascript://" data-bind="click: showModal" class="thumbnail" >
         <img id="mainimage" src="{{ STATIC_URL }}{{ item.cover }}" alt="{{ item.title }}" />
       </a>
-      <hr style="margin: 10px 0;" class="hidden-phone">
+      <hr style="margin: 10px 0;" data-bind="visible: images().length > 0" class="hidden-phone">
       <ul class="thumbnails hidden-phone" data-bind="foreach: images">
         <li class="span3 thumbnail">
           <a href="javascript://" data-bind="click: $root.showModal">
