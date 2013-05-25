@@ -3,8 +3,29 @@
 {% block title %}B's Garden Treasures - Gallery Item{% endblock %}
 
 {% block scripts %}
+
   $(function(){
     $("li#gallery").addClass("active");
+
+    var vm = function()
+    {
+      self = this;
+      self.showModal = function()
+      {
+        var images = ["{{ STATIC_URL }}{{ item.cover }}", "{{ STATIC_URL }}{{ item.frame_image }}", "{{ STATIC_URL }}{{ item.image }}"];
+        $.fancybox.open(images, {
+          nextEffect: "fade",  
+          prevEffect: "fade",
+        });
+      }
+      self.updateCover = function(a,event)
+      {
+        var a = $(event.currentTarget).children("img").first();
+        $("#mainimage").attr("src", a.attr("src"));
+      }
+    };
+
+    ko.applyBindings(new vm());
   });
 {% endblock %}
 {% block content %}
@@ -17,18 +38,36 @@
   </div>
   <div class="row-fluid">
     <div class="span4">
-      <img src="{{ STATIC_URL }}{{ item.cover }}" alt="{{ item.title }}" />
+      <a href="javascript://" data-bind="click: showModal" class="thumbnail" >
+        <img id="mainimage" src="{{ STATIC_URL }}{{ item.cover }}" alt="{{ item.title }}" />
+      </a>
+      <hr style="margin: 10px 0;" class="hidden-phone">
+      <ul class="thumbnails hidden-phone">
+        <li class="span3 thumbnail">
+          <a href="javascript://" data-bind="click: showModal, event: {mouseover: updateCover}">
+            <img src="{{ STATIC_URL }}{{ item.cover }}" />
+          </a>
+        </li>
+        <li class="span3 thumbnail">
+          <a href="javascript://" data-bind="click: showModal, event: {mouseover: updateCover}">
+            <img src="{{ STATIC_URL }}{{ item.frame_image }}" />
+          </a>
+        </li>
+        <li class="span3 thumbnail">
+          <a href="javascript://" data-bind="click: showModal, event: {mouseover: updateCover}">
+            <img src="{{ STATIC_URL }}{{ item.image }}" />
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="span8">
-      <table class="table table-bordered" style="width: 50%;">
-      {% for m in item.galleryitemmodifier_set.all %}
-        <tr>
-          <td>{{ m.title }}</td>
-          <td>{{ m.value }}</td>
-        </tr>
-      {% endfor %}
-      </table>
-    </div>
+    <table class="table table-bordered span8">
+    {% for m in item.galleryitemmodifier_set.all %}
+      <tr>
+        <td class="span2" style="background-color: #FBFBFB;">{{ m.title }}</td>
+        <td class="span10">{{ m.value }}</td>
+      </tr>
+    {% endfor %}
+    </table>
   </div>
   <div class="row-fluid">
     <div class="span12">
