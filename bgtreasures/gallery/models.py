@@ -16,7 +16,7 @@ class GalleryItem(models.Model):
     cover = models.CharField(max_length=80)
     image = models.CharField(max_length=80)
     frame_image = models.CharField(max_length=80)
-    order = models.IntegerField(default=10)
+    order = models.IntegerField(default=100)
     description = models.TextField()
     addedOn = models.DateTimeField(default=datetime.datetime.now)
     updatedOn = models.DateTimeField(default=datetime.datetime.now)
@@ -30,7 +30,7 @@ class GalleryItem(models.Model):
 class GalleryItemModifier(models.Model):
     title = models.CharField(max_length=100)
     value = models.CharField(max_length=100)
-    order = models.IntegerField(default=10)
+    order = models.IntegerField(default=100)
     item = models.ForeignKey(GalleryItem)
 
     def __unicode__(self):
