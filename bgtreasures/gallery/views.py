@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.template import RequestContext
 
@@ -18,5 +18,5 @@ def gallery(request, gallery=None):
     return render_to_response(v, {'cats': cats, 'gallery': gallery}, context_instance=RequestContext(request))
 
 def gallery_item(request, gallery=None, id=None):
-    item = GalleryItem.objects.get(item_num=id)
+    item = get_object_or_404(GalleryItem, item_num=id)
     return render_to_response('item.html', {'item': item, 'gallery': gallery, 'id': id}, context_instance=RequestContext(request))
