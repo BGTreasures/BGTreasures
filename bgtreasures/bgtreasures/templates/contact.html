@@ -15,27 +15,44 @@
         <hr>
       </div>
     </div>
-    <div class="row-fluid">
-      <div class="span6">
-        <form action="/contact/" method="post">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <input type="submit" value="Send" />
-        </form>
+    <form class="well span8" method="post" action="/contact/" style="margin-left: 0;">
+      {% csrf_token %}
+      <div class="row">
+        <div class="span3">
+          <label>First Name</label>
+          <input type="text" class="span3" placeholder="Your First Name">
+          <label>Last Name</label>
+          <input type="text" class="span3" placeholder="Your Last Name">
+          <label>Email Address</label>
+          <input type="text" class="span3" placeholder="Your email address">
+                <label>Subject</label>
+          <select id="subject" name="subject" class="span3">
+            <option value="na" selected="">Choose One:</option>
+            <option value="service">General Customer Service</option>
+            <option value="suggestions">Suggestions</option>
+            <option value="product">Product Support</option>
+          </select>
+        </div>
+        <div class="span5">
+          <label>Message</label>
+          <textarea name="message" id="message" class="input-xlarge span5" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary pull-right">Send</button>
       </div>
-      <div class="span6">
-        <h4>Artist Betty Green</h4>
-        <p>
-          <address>
-            B’s Garden Treasures<br>
-            1917 Route 14 North<br>
-            Geneva, NY 14456
-          </address>
-          315-789-2911<br>
-          <a href="mailto:info@BGTreasures.com">info@BGTreasures.com</a>
-        </p>
-      </div>
+    </form>
+    <div class="span3">
+      <h4>Artist Betty Green</h4>
+      <p>
+        <address>
+          B’s Garden Treasures<br>
+          1917 Route 14 North<br>
+          Geneva, NY 14456
+        </address>
+        315-789-2911<br>
+        <a href="mailto:info@BGTreasures.com">info@BGTreasures.com</a>
+      </p>
     </div>
+
   </div>
 </div>
 {% endblock %}
