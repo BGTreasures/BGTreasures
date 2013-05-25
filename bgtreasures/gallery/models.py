@@ -27,6 +27,17 @@ class GalleryItem(models.Model):
     class Meta:
         ordering = ['category__id', 'order']
 
+class GalleryItemImage(models.Model):
+    item = models.ForeignKey(GalleryItem)
+    image = models.CharField(max_length=255)
+    order = models.SmallIntegerField(default=100)
+
+    def __unicode__(self):
+        return "(%s): %s" % (self.item.title, self.image)
+
+    class Meta:
+        ordering = ['item__id', 'order']
+
 class GalleryItemModifier(models.Model):
     title = models.CharField(max_length=100)
     value = models.CharField(max_length=100)
