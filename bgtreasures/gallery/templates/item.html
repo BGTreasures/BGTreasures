@@ -6,26 +6,27 @@
 
   $(function(){
     $("li#gallery").addClass("active");
-
-    var vm = function()
+    var vm = function(imgs)
     {
       self = this;
+      self.images = ko.observableArray(imgs);
+      self.position = ko.observable(0);
       self.showModal = function()
       {
-        var images = ["{{ STATIC_URL }}{{ item.cover }}", "{{ STATIC_URL }}{{ item.frame_image }}", "{{ STATIC_URL }}{{ item.image }}"];
-        $.fancybox.open(images, {
+        $.fancybox.open(imgs, {
           nextEffect: "fade",  
           prevEffect: "fade",
         });
       }
-      self.updateCover = function(a,event)
-      {
-        var a = $(event.currentTarget).children("img").first();
-        $("#mainimage").attr("src", a.attr("src"));
-      }
     };
 
-    ko.applyBindings(new vm());
+    var json = {{ images|safe }};
+    json = _.map(json, function(obj){
+      obj.image = "{{ STATIC_URL }}" + obj.image;
+      obj.href = obj.image;
+      return obj;
+    });
+    ko.applyBindings(new vm(json));
   });
 {% endblock %}
 {% block content %}
@@ -42,20 +43,10 @@
         <img id="mainimage" src="{{ STATIC_URL }}{{ item.cover }}" alt="{{ item.title }}" />
       </a>
       <hr style="margin: 10px 0;" class="hidden-phone">
-      <ul class="thumbnails hidden-phone">
+      <ul class="thumbnails hidden-phone" data-bind="foreach: images">
         <li class="span3 thumbnail">
-          <a href="javascript://" data-bind="click: showModal, event: {mouseover: updateCover}">
-            <img src="{{ STATIC_URL }}{{ item.cover }}" />
-          </a>
-        </li>
-        <li class="span3 thumbnail">
-          <a href="javascript://" data-bind="click: showModal, event: {mouseover: updateCover}">
-            <img src="{{ STATIC_URL }}{{ item.frame_image }}" />
-          </a>
-        </li>
-        <li class="span3 thumbnail">
-          <a href="javascript://" data-bind="click: showModal, event: {mouseover: updateCover}">
-            <img src="{{ STATIC_URL }}{{ item.image }}" />
+          <a href="javascript://" data-bind="click: $root.showModal">
+            <img data-bind="attr: {src: href}" />
           </a>
         </li>
       </ul>
