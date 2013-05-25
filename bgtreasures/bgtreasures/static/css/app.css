@@ -74,25 +74,15 @@ body {}
 #bg-carousel .inner-item img{ margin: 0 auto;}
 
 @media (max-width: 767px) {
-  .container { left: auto; right: auto }
-  container{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  body{
-    padding-left: 0;
-    padding-right: 0;
+  #header{
+    margin-right: -20px;
+    margin-left: -20px;
   }
 }
 @media (max-width: 480px) {
-  .container { left: auto; right: auto }
-  container{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  body{
-    padding-left: 0;
-    padding-right: 0;
+  #header{
+    margin-right: -20px;
+    margin-left: -20px;
   }
 }
 
