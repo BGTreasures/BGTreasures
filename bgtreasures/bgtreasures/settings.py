@@ -98,6 +98,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.admin',
     'gallery',
+    'contact',
 )
 
 # A sample logging configuration. The only tangible logging
