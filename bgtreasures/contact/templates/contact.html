@@ -18,6 +18,11 @@
             Please correct the error{{ form.errors|pluralize }} below.
         </p>
         {% endif %}
+        {% if send_status != None %}
+        <p style="color: red;">
+          {{ send_status|safe }}
+        </p>
+        {% endif %}
       </div>
     </div>
     <form class="well span8" method="post" action="{% url 'contact' %}" style="margin-left: 0;">
@@ -51,7 +56,7 @@
           Geneva, NY 14456
         </address>
         315-789-2911<br>
-        <a href="mailto:info@BGTreasures.com">info@BGTreasures.com</a>
+        <a href="mailto:{{ email }}">{{ email }}</a>
       </p>
     </div>
   </div>
