@@ -24,15 +24,20 @@
       {% csrf_token %}
       <div class="row">
         <div class="span3">
-          <label>Name</label>
-          {{ form.name_label }}
-          {{ form.name }}
-          <label>Email Address</label>
-          {{ form.email }}
+          {{ form.name.label }}
+          <div class="control-group {%if form.name.errors %}error{%endif%}">
+            {{ form.name }}
+          </div>
+          {{ form.email.label }}
+          <div class="control-group {%if form.email.errors %}error{%endif%}">
+            {{ form.email }}
+          </div>
         </div>
         <div class="span5">
-          <label>Message</label>
+          {{ form.message.label }}
+          <div class="control-group {%if form.message.errors %}error{%endif%}">
           {{ form.message }}
+          </div>
         </div>
         <button type="submit" class="btn btn-primary pull-right">Send</button>
       </div>
