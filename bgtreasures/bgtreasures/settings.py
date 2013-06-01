@@ -11,7 +11,13 @@ ADMINS = (
     ('Arron Green', 'arrong@gmail.com'),
 )
 
-MANAGERS = ADMINS
+MANAGERS = (
+    ('Betty Green', 'info@bgtreasures.com'),
+)
+EMAIL_SUBJECT = "contact inquiry from bgtreasures.com"
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DATABASES = {
     'default': {
@@ -98,6 +104,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'django.contrib.admin',
     'gallery',
+    'contact',
 )
 
 # A sample logging configuration. The only tangible logging
