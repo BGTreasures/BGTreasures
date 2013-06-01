@@ -13,29 +13,36 @@
       <div id="title" class="span12">
         <h2>Contact</h2>
         <hr>
+        {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+        {% endif %}
+        {% if send_status != None %}
+        <p style="color: red;">
+          {{ send_status|safe }}
+        </p>
+        {% endif %}
       </div>
     </div>
-    <form class="well span8" method="post" action="/contact/" style="margin-left: 0;">
+    <form class="well span8" method="post" action="{% url 'contact' %}" style="margin-left: 0;">
       {% csrf_token %}
       <div class="row">
         <div class="span3">
-          <label>First Name</label>
-          <input type="text" class="span3" placeholder="Your First Name">
-          <label>Last Name</label>
-          <input type="text" class="span3" placeholder="Your Last Name">
-          <label>Email Address</label>
-          <input type="text" class="span3" placeholder="Your email address">
-                <label>Subject</label>
-          <select id="subject" name="subject" class="span3">
-            <option value="na" selected="">Choose One:</option>
-            <option value="service">General Customer Service</option>
-            <option value="suggestions">Suggestions</option>
-            <option value="product">Product Support</option>
-          </select>
+          {{ form.name.label }}
+          <div class="control-group {%if form.name.errors %}error{%endif%}">
+            {{ form.name }}
+          </div>
+          {{ form.email.label }}
+          <div class="control-group {%if form.email.errors %}error{%endif%}">
+            {{ form.email }}
+          </div>
         </div>
         <div class="span5">
-          <label>Message</label>
-          <textarea name="message" id="message" class="input-xlarge span5" rows="10"></textarea>
+          {{ form.message.label }}
+          <div class="control-group {%if form.message.errors %}error{%endif%}">
+          {{ form.message }}
+          </div>
         </div>
         <button type="submit" class="btn btn-primary pull-right">Send</button>
       </div>
@@ -49,10 +56,9 @@
           Geneva, NY 14456
         </address>
         315-789-2911<br>
-        <a href="mailto:info@BGTreasures.com">info@BGTreasures.com</a>
+        <a href="mailto:{{ email }}">{{ email }}</a>
       </p>
     </div>
-
   </div>
 </div>
 {% endblock %}
