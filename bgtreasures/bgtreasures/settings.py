@@ -16,8 +16,6 @@ MANAGERS = (
 )
 EMAIL_SUBJECT = "contact inquiry from bgtreasures.com"
 
-if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 DATABASES = {
     'default': {
@@ -140,4 +138,7 @@ try:
     from local_settings import *
 except ImportError:
     pass
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
