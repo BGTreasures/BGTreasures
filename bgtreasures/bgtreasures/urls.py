@@ -26,3 +26,15 @@ urlpatterns += patterns('',
     url(r'^contact/', include('contact.urls')),
 )
 
+#legacy urls
+from django.views.generic.simple import redirect_to
+urlpatterns += patterns('',
+    ('^[Ii]ndex.html?$', redirect_to, {'url': '/'}),
+    ('^[Gg]allery.html?$', redirect_to, {'url': '/gallery/original'}),
+    ('^pressed-flower-art$', redirect_to, {'url': '/gallery/original'}),
+    ('^[Oo]ther_[Pp]roducts.html?$', redirect_to, {'url': '/gallery/original'}),
+    ('^other-products$', redirect_to, {'url': '/gallery/original'}),
+    ('^[Ss]hows.html?$', redirect_to, {'url': '/shows'}),
+    ('^[Aa]bout.html?$', redirect_to, {'url': '/about'}),
+    ('^[Cc]ontact.html?$', redirect_to, {'url': '/contact/'}),
+)
