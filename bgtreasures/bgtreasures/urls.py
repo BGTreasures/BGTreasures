@@ -27,14 +27,14 @@ urlpatterns += patterns('',
 )
 
 #legacy urls
-from django.views.generic.simple import redirect_to
+from django.views.generic.base import RedirectView
 urlpatterns += patterns('',
-    ('^[Ii]ndex.html?$', redirect_to, {'url': '/'}),
-    ('^[Gg]allery.html?$', redirect_to, {'url': '/gallery/original'}),
-    ('^pressed-flower-art$', redirect_to, {'url': '/gallery/original'}),
-    ('^[Oo]ther_[Pp]roducts.html?$', redirect_to, {'url': '/gallery/original'}),
-    ('^other-products$', redirect_to, {'url': '/gallery/original'}),
-    ('^[Ss]hows.html?$', redirect_to, {'url': '/shows'}),
-    ('^[Aa]bout.html?$', redirect_to, {'url': '/about'}),
-    ('^[Cc]ontact.html?$', redirect_to, {'url': '/contact/'}),
+    ('^[Ii]ndex.html?$', RedirectView.as_view(url='/', permanent=True)),
+    ('^[Gg]allery.html?$', RedirectView.as_view(url='/gallery/original', permanent=True)),
+    ('^pressed-flower-art$', RedirectView.as_view(url='/gallery/original', permanent=True)),
+    ('^[Oo]ther_[Pp]roducts.html?$', RedirectView.as_view(url='/gallery/original', permanent=True)),
+    ('^other-products$', RedirectView.as_view(url='/gallery/original', permanent=True)),
+    ('^[Ss]hows.html?$', RedirectView.as_view(url='/shows', permanent=True)),
+    ('^[Aa]bout.html?$', RedirectView.as_view(url='/about', permanent=True)),
+    ('^[Cc]ontact.html?$', RedirectView.as_view(url='/contact/', permanent=True)),
 )
