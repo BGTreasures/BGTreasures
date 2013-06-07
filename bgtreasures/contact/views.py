@@ -25,7 +25,7 @@ def contact(request):
                 bcc = [settings.ADMIN_EMAIL_TO]
                 email_split = recipient_email.split('@')
                 from_email = "".join((email_split[0], "+", "@", email_split[1]))
-                msg = EmailMessage(settings.EMAIL_SUBJECT, email_message, from_email, from_email, bcc, 
+                msg = EmailMessage(settings.EMAIL_SUBJECT, email_message, from_email, [from_email], bcc, 
                         headers = {'Reply-To': data['email']})
                 msg.send()
                 return HttpResponseRedirect(reverse('contact_success'))
