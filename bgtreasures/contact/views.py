@@ -23,7 +23,7 @@ def contact(request):
             try:
                 email_message = settings.EMAIL_TEMPLATE.format(**data)
                 bcc = [settings.ADMIN_EMAIL_TO]
-                msg = EmailMessage(settings.EMAIL_SUBJECT, email_message, "webmailer@bgtreasures.com", send_to, bcc, 
+                msg = EmailMessage(settings.EMAIL_SUBJECT, email_message, recipient_email, send_to, bcc, 
                         headers = {'Reply-To': data['email']})
                 msg.send()
                 return HttpResponseRedirect(reverse('contact_success'))
