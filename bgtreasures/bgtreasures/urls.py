@@ -3,6 +3,7 @@ from django.contrib import admin
 
 from gallery import urls
 from contact import urls
+from links import urls
 
 admin.autodiscover()
 
@@ -14,8 +15,8 @@ urlpatterns = patterns('',
 
     #apps
     url(r'^gallery/', include('gallery.urls')),
-    url(r'^contact/', include('contact.urls')),
     url(r'^links/', include('links.urls')),
+    url(r'^contact/', include('contact.urls')),
 
     #admin
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
