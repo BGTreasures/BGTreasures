@@ -11,19 +11,15 @@ urlpatterns = patterns('',
     url(r'^about$', 'bgtreasures.views.about', name='about'),
     url(r'^supplies$', 'bgtreasures.views.supplies', name='supplies'),
     url(r'^shows$', 'bgtreasures.views.shows', name='shows'),
-    url(r'^links$', 'bgtreasures.views.links', name='links'),
+
+    #apps
+    url(r'^gallery/', include('gallery.urls')),
+    url(r'^contact/', include('contact.urls')),
+    url(r'^links/', include('links.urls')),
 
     #admin
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-)
-
-urlpatterns += patterns('',
-    url(r'^gallery/', include('gallery.urls')),
-)
-
-urlpatterns += patterns('',
-    url(r'^contact/', include('contact.urls')),
 )
 
 #legacy urls

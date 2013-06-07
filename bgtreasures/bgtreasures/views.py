@@ -16,6 +16,3 @@ def supplies(request):
 def shows(request):
     return render_to_response('shows.html', {}, context_instance=RequestContext(request))
 
-def links(request):
-    return render_to_response('links.html', {}, context_instance=RequestContext(request))
-
