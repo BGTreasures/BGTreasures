@@ -5,28 +5,32 @@ from django import http
 from django.core.urlresolvers import reverse
 
 from models import ContactForm
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage
 from bgtreasures import settings
 
 def contact(request):
     send_error = None
-    recipient_name, recipient_email = settings.MANAGERS[0]
+    recipient_email = settings.EMAIL_TO
     if request.method == 'POST':
+        send_to = []
+        for manager in settings.MANAGERS:
+            name, email = manager
+            send_to.append(email)
+
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['name']
-            sender = form.cleaned_data['email']
-            message = form.cleaned_data['message']
+            data = {'name':form.cleaned_data['name'], 'email': form.cleaned_data['email'], 'message': form.cleaned_data['message']}
+            try:
+                email_message = settings.EMAIL_TEMPLATE.format(**data)
+                bcc = [settings.ADMIN_EMAIL_TO]
+                msg = EmailMessage(settings.EMAIL_SUBJECT, email_message, recipient_email, send_to, bcc, 
+                        headers = {'Reply-To': data['email']})
+                msg.send()
+                return HttpResponseRedirect(reverse('contact_success'))
+            except:
+                send_error = "You contact submission cannot be sent at this time. Send an email to %s and let them know of this error" % (recipient_email)
 
-            if name and sender and message:
-                try:
-                    send_mail(settings.EMAIL_SUBJECT, message, sender, [recipient_email])
-                    contact_success = reverse('contact_success')
-                    return HttpResponseRedirect(contact_success)
-                except:
-                    send_error = "You contact submission cannot be sent at this time. Send an email to %s and let them know of this error" % (recipient)
-
-            form = ContactForm({'name': name, 'email': sender, 'message': message})
+            form = ContactForm({'name': data['name'], 'email': data['email'], 'message': data['message']})
     else:
         form = ContactForm()
 

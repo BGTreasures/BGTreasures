@@ -14,7 +14,15 @@ ADMINS = (
 MANAGERS = (
     ('Betty Green', 'info@bgtreasures.com'),
 )
+
+ADMIN_EMAIL_TO = ADMINS[0][1]
+EMAIL_TO = MANAGERS[0][1]
 EMAIL_SUBJECT = "contact inquiry from bgtreasures.com"
+EMAIL_TEMPLATE = """
+bgtreasures.com contact message
+sent from: {name} with the email: {email}
+{message}
+"""
 
 
 DATABASES = {
