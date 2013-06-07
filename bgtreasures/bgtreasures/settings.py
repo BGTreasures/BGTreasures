@@ -111,6 +111,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'gallery',
     'contact',
+    'links',
 )
 
 # A sample logging configuration. The only tangible logging
