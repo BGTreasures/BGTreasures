@@ -15,3 +15,7 @@ class LinkItem(models.Model):
     order = models.IntegerField(default=10)
     added_on = models.DateTimeField(default=datetime.datetime.now)
     updated_on = models.DateTimeField(default=datetime.datetime.now)
+
+
+    def __unicode__(self):
+        return str(self.resource_title)
