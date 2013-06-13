@@ -19,7 +19,7 @@ class LinkItem(models.Model):
     category = models.ForeignKey(LinkCategory)
     resource_title = models.CharField(max_length=50)
     resource_url = models.CharField(max_length=100)
-    resource_description = models.CharField(max_length=500, blank=True)
+    resource_description = models.CharField(max_length=1000, blank=True)
     order = models.IntegerField(default=10)
     visible = models.BooleanField(default=True)
     added_on = models.DateTimeField(default=datetime.datetime.now)
