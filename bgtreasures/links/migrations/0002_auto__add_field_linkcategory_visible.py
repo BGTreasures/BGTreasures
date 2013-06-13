@@ -35,7 +35,7 @@ class Migration(SchemaMigration):
             'category': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['links.LinkCategory']"}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
             'order': ('django.db.models.fields.IntegerField', [], {'default': '10'}),
-            'resource_description': ('django.db.models.fields.CharField', [], {'max_length': '500', 'blank': 'True'}),
+            'resource_description': ('django.db.models.fields.CharField', [], {'max_length': '1000', 'blank': 'True'}),
             'resource_title': ('django.db.models.fields.CharField', [], {'max_length': '50'}),
             'resource_url': ('django.db.models.fields.URLField', [], {'max_length': '200'}),
             'updated_on': ('django.db.models.fields.DateTimeField', [], {'default': 'datetime.datetime.now'}),
