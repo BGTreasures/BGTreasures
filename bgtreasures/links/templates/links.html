@@ -29,7 +29,7 @@
         <a href="{{ l.resource_url }}">{{ l.resource_title }}</a>
       </div>
       <div class="resource-summary">
-        {{ l.resource_description }}
+        {{ l.resource_description|safe }}
       </div>
     {% endfor %}
     </div>
