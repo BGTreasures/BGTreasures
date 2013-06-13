@@ -1,16 +1,18 @@
 from django.contrib import admin
 from models import *
+from forms import *
 
-class LinkCategoryItemInline(admin.TabularInline):
+class LinkCategoryItemInline(admin.StackedInline):
     model = LinkItem
-    extra = 3
+    extra = 1
+    form = LinkItemAdminForm
 
 class LinkCategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'added_on', 'updated_on', 'get_links')
     list_filter = ['title']
     search_fields = ['title', 'linkitem__resource_title']
     fieldsets = [
-        (None, {'fields': ['title']}),
+        (None, {'fields': ['title', 'visible']}),
         ('Order', {'fields': ['order']}),
         ('Dates', {'fields': ['added_on', 'updated_on'], 'classes': ['collapse']}),
     ]
