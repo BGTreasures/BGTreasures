@@ -24,7 +24,7 @@
   </div>
   <div class="row-fluid">
     <div class="span12 resource-listing">
-    {% for l in c.linkitem_set.all %}
+    {% for l in c.visible_items %}
       <div class="resource-link">
         <a href="{{ l.resource_url }}">{{ l.resource_title }}</a>
       </div>
