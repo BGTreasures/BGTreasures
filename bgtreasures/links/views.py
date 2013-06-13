@@ -5,6 +5,6 @@ from django import http
 from models import *
 
 def links(request):
-    cats = LinkCategory.objects.all()
+    cats = LinkCategory.objects.filter(visible=True).order_by("order")
     return render_to_response('links.html', {'cats': cats}, context_instance=RequestContext(request))
 
