@@ -10,7 +10,7 @@ body {}
 
 .container {left:auto;right:auto}
 
-@import url(http://fonts.googleapis.com/css?family=Lovers+Quarrel);
+@import url(//fonts.googleapis.com/css?family=Lovers+Quarrel);
 .bg-quote{
   font-size: 16px;
   color: #444;
