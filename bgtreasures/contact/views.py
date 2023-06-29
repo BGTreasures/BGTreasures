@@ -19,7 +19,7 @@ def contact(request):
 
         form = ContactForm(request.POST)
         if form.is_valid():
-            data = {'name':form.cleaned_data['name'], 'email': form.cleaned_data['email'], 'message': form.cleaned_data['message']}
+            data = {'name':form.cleaned_data['name'], 'email': form.cleaned_data['email'], 'body': form.cleaned_data['body']}
             try:
                 email_message = settings.EMAIL_TEMPLATE.format(**data)
                 bcc = [settings.ADMIN_EMAIL_TO]
@@ -30,7 +30,7 @@ def contact(request):
             except:
                 send_error = "You contact submission cannot be sent at this time. Send an email to %s and let them know of this error" % (recipient_email)
 
-            form = ContactForm({'name': data['name'], 'email': data['email'], 'message': data['message']})
+            form = ContactForm({'name': data['name'], 'email': data['email'], 'body': data['body']})
     else:
         form = ContactForm()
 
