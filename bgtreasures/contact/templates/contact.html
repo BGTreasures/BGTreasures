@@ -13,7 +13,6 @@
       <div id="title" class="span12">
         <h2>Contact</h2>
         <hr>
-        Send an email to <a href="mailto:{{ email }}">{{ email }}</a>
         {% if form.errors %}
         <p style="color: red;">
             Please correct the error{{ form.errors|pluralize }} below.
@@ -25,6 +24,9 @@
         </p>
         {% endif %}
       </div>
+    </div>
+    <div class="span8">
+        Send an email to <a href="mailto:{{ email }}">{{ email }}</a>
     </div>
     <!-- <form class="well span8" method="get" target="_top" action="mailto:{{ email }}" enctype="text/plain" style="margin-left: 0;">
       {% csrf_token %}
